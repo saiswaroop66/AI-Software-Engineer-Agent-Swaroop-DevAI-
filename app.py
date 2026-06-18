@@ -25,7 +25,7 @@ task = st.text_area("Enter your software task")
 # -----------------------
 def planner(task):
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="llama-3.1-8b-instant",
         messages=[{
             "role": "user",
             "content": f"""
@@ -50,7 +50,7 @@ Rules:
 # -----------------------
 def code_generator(task, plan):
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+     model="llama-3.1-8b-instant",
         messages=[{
             "role": "user",
             "content": f"""
@@ -80,7 +80,7 @@ Rules:
 # -----------------------
 def reviewer(code):
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+     model="llama-3.1-8b-instant",
         messages=[{
             "role": "user",
             "content": f"""
